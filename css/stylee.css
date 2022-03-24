@@ -1,0 +1,129 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Outfit", sans-serif;
+  background-color: hsl(217, 54%, 11%);
+}
+.card {
+  background-color: hsl(216, 50%, 16%);
+  width: 350px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  border-radius: 15px;
+}
+.card .image {
+  border-radius: 10px;
+  position: relative;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.card .image img {
+  max-width: 100%;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.card .image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: hsl(178 100% 50% / 50%);
+  border-radius: 10px;
+  display: none;
+  transition: 0.3s;
+}
+.card .image::after {
+  content: "";
+  background-image: url(../imgs/icon-view.svg);
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  display: none;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  -moz-transition: 0.3s;
+  -ms-transition: 0.3s;
+  -o-transition: 0.3s;
+}
+.card .image:hover.image::before,
+.card .image:hover.image::after {
+  display: block;
+  cursor: pointer;
+}
+.card .text .text-top {
+  margin-top: 20px;
+  border-bottom: 1px solid hsl(215, 51%, 70%);
+}
+.card .text .text-top h2 {
+  color: hsl(0, 0%, 100%);
+  font-size: 23px;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+.card .text .text-top h2:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
+.card .text .text-top p {
+  color: hsl(215, 51%, 70%);
+  font-size: 18px;
+  font-weight: 300;
+}
+.card .text .text-top .inside {
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.card .text .text-top .inside span {
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+}
+.card .text .text-top .inside span:first-child {
+  color: hsl(178, 100%, 50%);
+}
+.card .text .text-top .inside span img {
+  margin-right: 5px;
+}
+.card .text .text-top .inside span:last-child {
+  color: hsl(215, 51%, 70%);
+}
+.card .text .text-bottom {
+  padding: 20px 0 0;
+  display: flex;
+  align-items: center;
+}
+.card .text .text-bottom img {
+  width: 50px;
+  border: 1px solid white;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.card .text .text-bottom p {
+  color: hsl(215, 51%, 70%);
+}
+.card .text .text-bottom p span {
+  color: white;
+}
+.card .text .text-bottom p span:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
